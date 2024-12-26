@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOU</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('bg.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow-y: auto;
+            max-height: 90vh; /* Allow the content to scroll */
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            font-size: 1.4em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-weight: 300;
+            color: #fff;
+        }
+
+        .heart {
+            color: #FF4C4C;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            margin-top: 30px;
+            font-size: 1.5em;
+            color: #FFD700;
+            font-weight: 500;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        .button-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .button {
+            background-color: #FF4C4C;
+            color: white;
+            padding: 14px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #FF1F1F;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1.2em;
+            }
+
+            .button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+
+        /* Animation for heart emoji */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .heart {
+            animation: heartbeat 1.5s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>For My Love</h1>
+        <p>Every moment spent with you is a treasure. My heart beats for you, and my soul is yours forever.  
+        You are the light in my life, the smile on my face, and the joy in my heart.</p>
+        <p class="heart">❤️</p>
+        <p>You are my greatest gift this Christmas, and I am thankful every day that you're mine. With you by my side(virtually),  
+          I feel complete, and I can't wait for all the beautiful memories we'll create together.
+          Now for the last message sang letter nga ini :* I want you to be happy kag mag build kita manami nga future :*
+          And you are the only girl that I will fck and kiss with. :* YOU ARE SO SPECIAL DU REBISCO HAHAHAA may pa extra
+          We'll never give up love. once again I LOVE YOU LOVE..          
+        </p>
+        <p class="quote">"You are my today and all of my tomorrows." – Leo Christopher</p>
+        <div class="button-container">
+            <a href="index.html" class="button">Back to Home</a>
+            <a href="us.html" class="button">Next</a>
+        </div>
+    </div>
+</body>
+</html>

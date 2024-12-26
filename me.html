@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('bg.gif') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .box p {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background: #6a89cc;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #547aa5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hear this my love</h1>
+    <div class="container">
+        <div class="box" data-audio="vm1">
+            <p>Voice Message 1</p>
+        </div>
+        <div class="box" data-audio="vm2">
+            <p>Voice Message 2</p>
+        </div>
+        <div class="box" data-audio="vm3">
+            <p>Voice Message 3</p>
+        </div>
+        <div class="box" data-audio="vm4">
+            <p>Voice Message 4</p>
+        </div>
+    </div>
+    <a href="mnu.html" class="back-button">Next</a>
+
+    <script>
+        const audios = {
+            vm1: new Audio('vm1.m4a'),
+            vm2: new Audio('vm2.m4a'),
+            vm3: new Audio('vm3.m4a'),
+            vm4: new Audio('vm4.m4a'),
+        };
+
+        let currentPlaying = null;
+
+        document.querySelectorAll('.box').forEach(box => {
+            box.addEventListener('click', () => {
+                const audioKey = box.getAttribute('data-audio');
+                const audio = audios[audioKey];
+
+                if (currentPlaying && currentPlaying !== audio) {
+                    currentPlaying.pause();
+                    currentPlaying.currentTime = 0;
+                }
+
+                if (audio.paused) {
+                    audio.play();
+                    currentPlaying = audio;
+                } else {
+                    audio.pause();
+                    currentPlaying = null;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

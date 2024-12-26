@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Letter</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+            background: url('forest.gif') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .image {
+            width: 100%;
+            max-width: 400px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image:hover {
+            transform: scale(1.05);
+        }
+
+        .letter {
+            font-size: 1.1em;
+            color: #333;
+            margin-top: 20px;
+            line-height: 1.6;
+            text-align: left;
+            padding: 15px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .close-button, .next-button {
+            position: absolute;
+            bottom: 10px;
+            padding: 12px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            border: none;
+            font-weight: bold;
+        }
+
+        .close-button {
+            left: 10px;
+            background-color: #FF4C4C;
+            color: white;
+        }
+
+        .close-button:hover {
+            background-color: #FF1F1F;
+        }
+
+        .next-button {
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .next-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Fireflies styling */
+        .firefly {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            animation: move 4s linear infinite, flicker 1.5s infinite;
+        }
+
+        .yellow {
+            background: radial-gradient(circle, rgba(255, 255, 0, 1) 0%, rgba(255, 255, 0, 0) 70%);
+        }
+
+        .blue {
+            background: radial-gradient(circle, rgba(0, 191, 255, 1) 0%, rgba(0, 191, 255, 0) 70%);
+        }
+
+        .green {
+            background: radial-gradient(circle, rgba(50, 205, 50, 1) 0%, rgba(50, 205, 50, 0) 70%);
+        }
+
+        .pink {
+            background: radial-gradient(circle, rgba(255, 105, 180, 1) 0%, rgba(255, 105, 180, 0) 70%);
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(40vw, -20vh);
+            }
+            50% {
+                transform: translate(-30vw, 40vh);
+            }
+            75% {
+                transform: translate(30vw, -40vh);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes flicker {
+            0%, 100% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fireflies -->
+    <script>
+        const colors = ["yellow", "blue", "green", "pink"];
+        for (let i = 0; i < 30; i++) {
+            const firefly = document.createElement("div");
+            firefly.className = `firefly ${colors[Math.floor(Math.random() * colors.length)]}`;
+            firefly.style.top = `${Math.random() * 100}vh`;
+            firefly.style.left = `${Math.random() * 100}vw`;
+            firefly.style.animationDelay = `${Math.random() * 4}s`;
+            document.body.appendChild(firefly);
+        }
+    </script>
+
+    <!-- Letter Container -->
+    <div class="container" id="container1">
+        <img id="image1" src="fire1.gif" alt="Tap me" class="image">
+        <img id="image2" src="fire.png" alt="Tap me" class="image hidden">
+        <div id="letter1" class="letter hidden">
+            <p>My Dearest Love,</p>
+            <p>
+                Merry Christmas liwat love! Even though we are kilometers apart, you are always in my heart.  
+                This year has been challenging, but knowing that we will finally meet next year fills me with hope and excitement.  
+                I can't wait to hold you in my arms and create beautiful memories together.  
+                Until then, know that I love you more with every passing day. Gusto ko na e spank imo butt HAHAHAHA,
+                I LOVE YOU LOVE, I always do :* settle kana sakon kay di ko na ikaw pag bayaan :* never never never.              
+            </p>
+            <p>Yours forever, Cary          
+            </p>
+            <br>
+            <br>
+            <br>
+            <button class="close-button" id="closeButton1">Close</button>
+            <button class="next-button" id="nextButton">Next</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="container2">
+        <div id="letter2" class="letter">
+            <p>My Dearest Love,</p>
+            <p>
+                Christmas without you, but my heart is full of love for you.  
+                This year nga nakilala ko ikaw naging complete na christmas ko, and I am so grateful for your support and love.  
+                I look forward to our future together, and I can't wait for all the memories we'll create kay malagaw gid ta HAHAHA.
+                I really love you love like ging gayuma mo gid ko guro ay?? HAHAHAHA jk, na fall gid saimo super dalom nagid katama
+                Idk howwwwww but its nice kay mas better and unexpected :* I LOVE YOU LOVE.... I WILL ALWAYS DO
+            </p>
+            <p>Forever yours, Cary              
+            </p>
+            <br>
+            <br>
+            <br>
+            <button class="close-button" id="closeButton2">Close</button>
+            <!-- Make the second next button a link -->
+            <a href="you.html" id="nextButton2" class="next-button">Next</a>
+        </div>
+    </div>
+
+    <script>
+        const image1 = document.getElementById("image1");
+        const image2 = document.getElementById("image2");
+        const letter1 = document.getElementById("letter1");
+        const closeButton1 = document.getElementById("closeButton1");
+        const nextButton = document.getElementById("nextButton");
+        const container1 = document.getElementById("container1");
+        const container2 = document.getElementById("container2");
+
+        image1.addEventListener("click", () => {
+            image1.classList.add("hidden");
+            image2.classList.remove("hidden");
+        });
+
+        image2.addEventListener("click", () => {
+            image2.classList.add("hidden");
+            letter1.classList.remove("hidden");
+        });
+
+        closeButton1.addEventListener("click", () => {
+            letter1.classList.add("hidden");
+            image1.classList.remove("hidden");
+        });
+
+        nextButton.addEventListener("click", () => {
+            container1.classList.add("hidden");
+            container2.classList.remove("hidden");
+        });
+
+        // For the second container
+        const closeButton2 = document.getElementById("closeButton2");
+        closeButton2.addEventListener("click", () => {
+            container2.classList.add("hidden");
+            container1.classList.remove("hidden");
+        });
+    </script>
+</body>
+</html>
